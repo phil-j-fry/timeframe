@@ -1,0 +1,18 @@
+{
+  "name": "electron-timeframe",
+  "version": "1.0.0",
+  "description": "Status Board",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "author": "Philip Demmert",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.12"
+  }
+}
