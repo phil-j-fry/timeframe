@@ -11,19 +11,44 @@
       <div class="container-fluid h-100">
         <div class="row h-100">
           <div class="col-6 h-100">
-              <span style="position: absolute; bottom: 10px; left: 10px; color: lightgrey; text-align: left;">
-                <p id="datetime" style="font-size:48px"></p>
-                <h2>SUNDAY, OCT 13</h2>
+              <span class="dateTime">
+                  <div class="currentTime">
+                      <span id="currentTime">timeplaceholder</span>
+                  </div>
+
+                  <div class="currentDate">
+                    <span id="currentDate"> dateplaceholder</span>
+                  </div>
+
               </span>
           </div>
 
           <div class="col-6 h-100" style="position: relative;">
             <span style="position: absolute; bottom: 10px; right: 10px; color: lightgrey; text-align: right;">
-              <img src="./media/weather/21.png"width="105" height="105">
-              <h1>Foggy </h1>
-              <h3>65 degrees </h3>
+              <div class="row h-100">
+
+                <div class="col-sm-8" >
+                  <div class="temp">
+                      <span id="temp">placeholder</span>
+                      <span id="tempLabel"> °F</span>
+                  </div>
+                </div>  
+                <div class="col-sm-4">
+                  <div class="icon">
+                    <img id="icon" src="./media/weather/na.png"width="105" height="105">
+                  </div>
+                </div> 
+              </div>
+
+              <div class="description">
+                  <span id="description">placeholder</span>
+              </div>
+
+
+
               <h2>San Francisco, CA </h2>
-              <table class="weather">
+             
+              <table class="weather-table">
                 <thead>
                   <tr>
                   <th>SAT</th>
@@ -34,6 +59,7 @@
                 </thead>
                   <tbody>
                     <tr>
+                      
                     <td>
                         <img src="./media/weather/34.png" width="75" height="75">
                     </td>
@@ -406,16 +432,11 @@
 
 
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <!-- <script src="./renderer.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ"crossorigin="anonymous"></script>
-    
-    <script>
-      var dt = new Date();
-      var time = dt.getHours() + ":" + dt.getMinutes()
-      document.getElementById("datetime").innerHTML = time;
-    </script>
+    <script src="./scripts.js"></script>
 
   </body>
 </html>
