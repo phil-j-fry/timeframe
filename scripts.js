@@ -1,7 +1,7 @@
 // open weather map
 WEATHER_APP_ID = "d05bd3c5f2e4d99dd3bafe257acc3f4a";
 // sf
-geoid = "3669881";
+geoid = "5391997";
 
 //trello
 TRELLO_API_KEY = "da21954df03becdc40f5f596e579b325";
