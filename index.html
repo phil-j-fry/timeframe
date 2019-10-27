@@ -7,7 +7,7 @@
     <title>Timeframe</title>
   </head>
   <body>
-      <div class="bg">
+      <div class="bg" id="bg">
       <div class="container-fluid h-100">
         <div class="row h-100">
           <div class="col-6 h-100">
@@ -51,11 +51,17 @@
               <table class="weather-table">
                 <thead>
                   <tr>
-                  <th>SAT</th>
+                  <th>TODAY</th>
                   <th>SUN</th>
                   <th>MON</th>
                   <th>TUE</th>
                 </tr>
+                <tr>
+                    <th>49/68</th>
+                    <th>55/72</th>
+                    <th>56/78</th>
+                    <th>55/72</th>
+                  </tr>
                 </thead>
                   <tbody>
                     <tr>
@@ -81,66 +87,38 @@
         </div>
       </div>
     </div>
-   
-    <table class="darkTable">
-        <thead>
-        <tr>
-        <th>SAT</th>
-        <th>SUN</th>
-        <th>MON</th>
-        <th>TUE</th>
-        <th>WED</th>
-        <th>THUR</th>
-        <th>FRI</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
-        </tbody>
-        </tr>
-    </table>
-    <table class="darkTable">
-        <thead>
-        <tr>
-        <th></th>
-        
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td><div class="calendar dark">
-            <div class="calendar_events">
-             
-              <div class="event_item">
-                <div class="ei_Dot dot_active"></div>
-                <div class="ei_Title">10:30 am</div>
-                <div class="ei_Copy">Monday briefing with the team</div>
-              </div>
-              <div class="event_item">
-                <div class="ei_Dot"></div>
-                <div class="ei_Title">12:00 pm</div>
-                <div class="ei_Copy">Lunch for with the besties</div>
-              </div>
-              <div class="event_item">
-                <div class="ei_Dot"></div>
-                <div class="ei_Title">13:00 pm</div>
-                <div class="ei_Copy">Meet with the client for final design <br> @foofinder</div>
-              </div>
-              <div class="event_item">
-                <div class="ei_Dot"></div>
-                <div class="ei_Title">14:30 am</div>
-                <div class="ei_Copy">Plan event night to inspire students</div>
-              </div>
-              <div class="event_item">
-                <div class="ei_Dot"></div>
-                <div class="ei_Title">15:30 am</div>
-                <div class="ei_Copy">Add some more events to the calendar</div>
-              </div>
-            </div>
-          </div></td><td><div class="calendar dark">
+  <div class=row>
+    <div class=col-9 id="tablediv">
+      <table class="darkTable">
+          <thead>
+          <tr>
+          <th>SUN</th>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+          <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+          </tbody>
+          </tr>
+      </table>
+
+      <table class="darkTable">
+          <thead>
+          <tr>
+          <th></th>
+          
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td><div class="calendar dark">
               <div class="calendar_events">
-               
+              
                 <div class="event_item">
                   <div class="ei_Dot dot_active"></div>
                   <div class="ei_Title">10:30 am</div>
@@ -169,7 +147,7 @@
               </div>
             </div></td><td><div class="calendar dark">
                 <div class="calendar_events">
-                 
+                
                   <div class="event_item">
                     <div class="ei_Dot dot_active"></div>
                     <div class="ei_Title">10:30 am</div>
@@ -198,7 +176,7 @@
                 </div>
               </div></td><td><div class="calendar dark">
                   <div class="calendar_events">
-                   
+                  
                     <div class="event_item">
                       <div class="ei_Dot dot_active"></div>
                       <div class="ei_Title">10:30 am</div>
@@ -227,7 +205,7 @@
                   </div>
                 </div></td><td><div class="calendar dark">
                     <div class="calendar_events">
-                     
+                    
                       <div class="event_item">
                         <div class="ei_Dot dot_active"></div>
                         <div class="ei_Title">10:30 am</div>
@@ -256,7 +234,7 @@
                     </div>
                   </div></td><td><div class="calendar dark">
                       <div class="calendar_events">
-                       
+                      
                         <div class="event_item">
                           <div class="ei_Dot dot_active"></div>
                           <div class="ei_Title">10:30 am</div>
@@ -284,152 +262,60 @@
                         </div>
                       </div>
                     </div></td><td><div class="calendar dark">
-                        <div class="calendar_events">
-                         
-                          <div class="event_item">
-                            <div class="ei_Dot dot_active"></div>
-                            <div class="ei_Title">10:30 am</div>
-                            <div class="ei_Copy">Monday briefing with the team</div>
-                          </div>
-                          <div class="event_item">
-                            <div class="ei_Dot"></div>
-                            <div class="ei_Title">12:00 pm</div>
-                            <div class="ei_Copy">Lunch for with the besties</div>
-                          </div>
-                          <div class="event_item">
-                            <div class="ei_Dot"></div>
-                            <div class="ei_Title">13:00 pm</div>
-                            <div class="ei_Copy">Meet with the client for final design <br> @foofinder</div>
-                          </div>
-                          <div class="event_item">
-                            <div class="ei_Dot"></div>
-                            <div class="ei_Title">14:30 am</div>
-                            <div class="ei_Copy">Plan event night to inspire students</div>
-                          </div>
-                          <div class="event_item">
-                            <div class="ei_Dot"></div>
-                            <div class="ei_Title">15:30 am</div>
-                            <div class="ei_Copy">Add some more events to the calendar</div>
-                          </div>
-                        </div>
-                      </div></td></tr>
-        </tbody>
-        </tr>
+                        </div></td></tr>
+            </tbody>
+            </tr>
+        </table>
+    </div>
+
+    <div class=col-3 id="trellotable">
+        <table class="trello">
+            <thead>
+            <tr>
+            <th><span id="toDoTitle">To Do:</span></th>
+            </tr>
+            </thead>
+    
+            <tbody>
+            <tr>
+            <td>Some Text</td>
+            </tbody>
+
+        <td>
+          <div class="trello">
+            <div class="trello">
+            
+              <div class="event_item">
+                  <br><br>
+                  <span>- sometext</span>
+              </div>
+              <div class="event_item">
+                  <br>
+                  <span>- sometext</span>
+
+              </div>
+              <div class="event_item">
+                  <br>
+                  <span>- sometext</span>
+
+              </div>
+              <div class="event_item">
+                  <br>
+                  <span>- sometext</span>
+
+              </div>
+              <div class="event_item">
+                  <br>
+                  <span>- sometext</span>
+
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
     </table>
-    <!-- <div class="container-fluid">
-
-      <div class="row mb-2" style="background-color: black;">
-
-        <div class="col-md-4">
-          
-            <div class="calendar dark">
-                <div class="calendar_events">
-                 
-                  <div class="event_item">
-                    <div class="ei_Dot dot_active"></div>
-                    <div class="ei_Title">10:30 am</div>
-                    <div class="ei_Copy">Monday briefing with the team</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">12:00 pm</div>
-                    <div class="ei_Copy">Lunch for with the besties</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">13:00 pm</div>
-                    <div class="ei_Copy">Meet with the client for final design <br> @foofinder</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">14:30 am</div>
-                    <div class="ei_Copy">Plan event night to inspire students</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">15:30 am</div>
-                    <div class="ei_Copy">Add some more events to the calendar</div>
-                  </div>
-                </div>
-              </div>
-            
-          
-          </div>   
-       
-
-        <div class="col-md-4">
-            <div class="calendar dark">
-                <div class="calendar_events">
-                 
-                  <div class="event_item">
-                    <div class="ei_Dot dot_active"></div>
-                    <div class="ei_Title">10:30 am</div>
-                    <div class="ei_Copy">Monday briefing with the team</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">12:00 pm</div>
-                    <div class="ei_Copy">Lunch for with the besties</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">13:00 pm</div>
-                    <div class="ei_Copy">Meet with the client for final design <br> @foofinder</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">14:30 am</div>
-                    <div class="ei_Copy">Plan event night to inspire students</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">15:30 am</div>
-                    <div class="ei_Copy">Add some more events to the calendar</div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="col-md-4">
-          
-            <div class="calendar dark">
-                <div class="calendar_events">
-                 
-                  <div class="event_item">
-                    <div class="ei_Dot dot_active"></div>
-                    <div class="ei_Title">10:30 am</div>
-                    <div class="ei_Copy">Monday briefing with the team</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">12:00 pm</div>
-                    <div class="ei_Copy">Lunch for with the besties</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">13:00 pm</div>
-                    <div class="ei_Copy">Meet with the client for final design <br> @foofinder</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">14:30 am</div>
-                    <div class="ei_Copy">Plan event night to inspire students</div>
-                  </div>
-                  <div class="event_item">
-                    <div class="ei_Dot"></div>
-                    <div class="ei_Title">15:30 am</div>
-                    <div class="ei_Copy">Add some more events to the calendar</div>
-                  </div>
-                </div>
-              </div>
-            
-          
-          </div>   
-
-        </div>
-      </div> -->
-
-
+    </div>
+  </div>
 
     <!-- You can also require other files to run in this process -->
     <!-- <script src="./renderer.js"></script> -->
@@ -437,6 +323,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ"crossorigin="anonymous"></script>
     <script src="./scripts.js"></script>
+    <script src="./background.js"></script>
 
   </body>
 </html>

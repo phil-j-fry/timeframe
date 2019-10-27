@@ -1,11 +1,12 @@
 body, html {
   height: 100%;
+
 }
 .bg {
   /* The image used */
-  /* foggy */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
- 
+  /* background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg"); */
+  
+
   /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/GoldenMedows.jpg"); */
 
   /* 1/3 Height */
@@ -80,13 +81,30 @@ h2{
 
 table.weather-table thead tbody tr th {
   width: 175px;
-  text-align: center;
+  text-align: center; 
+}
+
+
+/* darktable */
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#tablediv {
+  padding-right: 5px;
+  padding-left: 10px;
 }
 
 table.darkTable {
   font-family: "Arial Black", Gadget, sans-serif;
   border: 2px solid #000000;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
+
   width: 100%;
   height: 150px;
   text-align: center;
@@ -118,10 +136,62 @@ table.darkTable thead th:first-child {
   border-left: none;
 }
 
+
+/* trello */
+
+#trellotable {
+  padding-top: 0px;
+  padding-left: 5px;
+  padding-right: 10px;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+table.trello{
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: 2px solid #000000;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  border-collapse: collapse;
+  color: white;
+  
+}
+
+.toDoTitle{
+  color: white;
+}
+
+/* trello td, trello th {
+  border: 1px solid #000000;
+  padding: 3px 2px;
+}
+trello tbody td {
+  font-size: 30px;
+  color: #E6E6E6;
+}
+trello tr:nth-child(even) {
+  background: #888888;
+}
+trello thead {
+  background: #3D4D4C;
+  border-bottom: 3px solid #000000;
+}
+trello thead th {
+  font-size: px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #000000;
+}
+trello thead th:first-child {
+  border-left: none; */ */
+
 /*  FOOTER NOT IN USE
 table.darkTable tfoot td {
   font-size: 12px;
-} */
+}
+
 
 $off_white:#fafafa;
 $light_grey:#A39D9E;
@@ -143,7 +213,7 @@ body{
 }
 .dark{
   /* margin-left: 65px; */
-}
+
 
 .calendar{
   /* width:275px; */
@@ -243,10 +313,13 @@ body{
 }
 
 .dark{
-  background-image: linear-gradient(-222deg, #646464, #454545);
+  /* background-image: linear-gradient(-222deg, #646464, #454545); */
+  background-color: rgba(136, 136, 136, 0.4);
+
   color:#fff;
   .header_title,.ei_Title,.ce_title{
     color:#fff;
   }
   
 }
+
