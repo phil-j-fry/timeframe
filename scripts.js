@@ -1,12 +1,17 @@
 // open weather map
 WEATHER_APP_ID = "d05bd3c5f2e4d99dd3bafe257acc3f4a";
-// sf
 geoid = "5391997";
 
 //trello
 TRELLO_API_KEY = "da21954df03becdc40f5f596e579b325";
 TRELLO_TOKEN = "69a4add59b9445ad65ec6dc887b3dc6053cf226b7bb5ffd86a80138010be52c2";
 BOARD_ID = "5db4a8b3aa5a014c94e047a5";
+
+//AIR QUALITY
+ZIP = "94103"
+AREA_DIST = '25'
+AIRQUAL_API = "676B9282-9148-4E86-B61F-101C3C2C4215"
+
 
 let daysArr = 
 ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
@@ -35,6 +40,7 @@ function update(weather){
 
    addBgStyleString(weather);
 }
+
 function toTitleCase(inputText){
     var text = inputText;
         text = text.toLowerCase()
@@ -50,7 +56,7 @@ function buildWeatherRequest(){
     var url = "http://api.openweathermap.org/data/2.5/weather?" +
     "id=" + geoid +
     "&appid=" + WEATHER_APP_ID;
-    return url;
+    sendWeatherRequest(url);
 
 }
 
@@ -85,7 +91,7 @@ function buildTrelloRequest(){
     "?fields=name,url&key=" + TRELLO_API_KEY +
     "&token=" + TRELLO_TOKEN;
     
-    return url;
+    sendTrelloRequest(url);
 
 }
 function sendTrelloRequest(url) {
@@ -111,13 +117,46 @@ function sendTrelloRequest(url) {
     xmlhttp.send();
 }
 
+// Air Quality API
 
-//Date Time
+function buildAirQualRequest(){
+    // var url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&" +
+    // "zipCode=" + ZIP +
+    // "&distance="+ AREA_DIST + 
+    // "&API_KEY="+ AIRQUAL_API;
 
-var dt = new Date();
-var time = dt.getHours() + ":" + dt.getMinutes();
-document.getElementById("currentTime").innerHTML = time;
-document.getElementById("currentDate").innerHTML = dt.getDay();
+//    url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=94103&distance=25&API_KEY=676B9282-9148-4E86-B61F-101C3C2C4215";
+
+    sendAirQualRequest(url);
+
+}
+function sendAirQualRequest(url) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var data = JSON.parse(xmlhttp.responseText);
+            var board = {};
+            
+            //console.log(data[0].name);
+           
+            // console.log(data);
+            updateAirQual(data);
+            // weather.main = (data.weather[0].main);
+            // weather.description = toTitleCase(data.weather[0].description);
+            // weather.icon = data.weather[0].icon;
+            // weather.temp = K2F(data.main.temp);
+
+            // update(weather);
+            // console.log(boardCard);
+        }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.setRequestHeader("Accept", 'application/json');
+    xmlhttp.send();
+
+}
+
 
 
 
@@ -126,6 +165,9 @@ function K2F(k){
 
 }
 
+
+
+// DATETIME
 
 
 // function time() {
@@ -137,29 +179,39 @@ function K2F(k){
 //   }
 
 
-
-window.onload = function() {
-
-    //icon = document.getElementById("icon");
-    temp = document.getElementById("temp");
-    description = document.getElementById("description");
-    apiUrl = buildWeatherRequest();
-    weather = sendWeatherRequest(apiUrl);
-
+function displayDateTime(){
     var dt = new Date();
     var rawMin = dt.getMinutes();
     var time = dt.getHours() + ":" + rawMin.toPrecision(2);
     var currentDay = daysArr[dt.getDay()] + " " + dt.getDate() + " " + monthsArr[dt.getMonth()+1];
     document.getElementById("currentDate").innerHTML = currentDay;
-
-
-
-    var span = document.getElementById('currentTime');
-    // setInterval(time, 1000);
+    document.getElementById("currentTime").innerHTML = time;
     
+}
+
+
+
+// ONLOAD FUNCTION
+
+window.onload = function() {
+
+    //icon = document.getElementById("icon");
+    // temp = document.getElementById("temp");
+    // description = document.getElementById("description");
+
     
-    trelloUrl = buildTrelloRequest();
-    sendTrelloRequest(trelloUrl);
+    buildWeatherRequest();
+    const weatherReq = setInterval(buildWeatherRequest, 300000);
+
+    buildTrelloRequest();
+    const trelloReq = setInterval(buildTrelloRequest, 300000);
+
+    displayDateTime();
+    const dateTime = setInterval(displayDateTime, 60000);
+
+
+    // buildAirQualRequest();
+    // const AirQualReq = setInterval(buildAirQualRequest, 300000);
 
 
 

@@ -29,12 +29,14 @@ const weatherTypes = {
         iconDay: "./media/weather/fire_smoke.png",
         iconNight: "./media/weather/fire_smoke.png",
         bgNightImage:'url("https://upload.wikimedia.org/wikipedia/commons/f/f8/THE_RED-ORANGE_SMOKE_CHARACTERISTIC_OF_THE_STEEL_PLANT_BLURS_THE_CITY_SKYLINE_-_NARA_-_545499.jpg")',
-        bgDayImage: 'url("https://commons.wikimedia.org/w/index.php?search=wildfire+smoke&title=Special%3ASearch&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Smoke_from_wildfire_on_Angel_Island_blankets_San_Franciscon.jpg")'
+        bgDayImage: 'url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Smoke_from_wildfire_on_Angel_Island_blankets_San_Franciscon.jpg")'
     },
-//     haze:{
-//         icon: 
-//         bgimage: 
-//     }
+    Haze:{
+        iconDay: "./media/weather/fire_smoke.png",
+        iconNight: "./media/weather/fire_smoke.png",
+        bgNightImage:'url("https://upload.wikimedia.org/wikipedia/commons/f/f8/THE_RED-ORANGE_SMOKE_CHARACTERISTIC_OF_THE_STEEL_PLANT_BLURS_THE_CITY_SKYLINE_-_NARA_-_545499.jpg")',
+        bgDayImage: 'url("https://upload.wikimedia.org/wikipedia/commons/a/ab/Smoke_from_wildfire_on_Angel_Island_blankets_San_Franciscon.jpg")'
+    },
 //     dust:{
 //         icon: 
 //         bgimage: 
@@ -106,7 +108,7 @@ function addBgStyleString(weather) {
 //  console.log("day: " + day)
 
     weatherType = weather.main;
-    // weatherType = "Rain"
+    // weatherType = "Smoke"
 
 //   console.log(weatherTypes[weatherType]);
 
