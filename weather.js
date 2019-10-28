@@ -25,10 +25,12 @@ const weatherTypes = {
 //         icon: 
 //         bgimage: 
 //     }
-//     smoke:{
-//         icon: 
-//         bgimage: 
-//     }
+    Smoke:{
+        iconDay: "./media/weather/fire_smoke.png",
+        iconNight: "./media/weather/fire_smoke.png",
+        bgNightImage:'url("https://upload.wikimedia.org/wikipedia/commons/f/f8/THE_RED-ORANGE_SMOKE_CHARACTERISTIC_OF_THE_STEEL_PLANT_BLURS_THE_CITY_SKYLINE_-_NARA_-_545499.jpg")',
+        bgDayImage: 'url("https://commons.wikimedia.org/w/index.php?search=wildfire+smoke&title=Special%3ASearch&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Smoke_from_wildfire_on_Angel_Island_blankets_San_Franciscon.jpg")'
+    },
 //     haze:{
 //         icon: 
 //         bgimage: 
@@ -37,10 +39,13 @@ const weatherTypes = {
 //         icon: 
 //         bgimage: 
 //     }
-//     fog:{
-//         icon: 
-//         bgimage: 'url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg")';
-//     }
+    Fog:{
+        iconDay: "./media/weather/foggy.png",
+        iconNight: "./media/weather/cloudy-night.png",
+        bgDayImage: 'url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg")',
+        bgNightImage: 'url("https://upload.wikimedia.org/wikipedia/commons/2/29/Foggy_night_at_Pikisaari%2C_Tornio%2C_Finland%2C_2015_May.jpg")',
+        bgMidImage: 'url("https://upload.wikimedia.org/wikipedia/commons/2/2f/SF_skyline_%28702056020%29.jpg")'
+    },
 //     sand:{
 //         icon: 
 //         bgimage: 
@@ -66,9 +71,9 @@ const weatherTypes = {
     Clear:{
 
         iconDay: "./media/weather/clear.png",
-        iconNight: "./media/weather/night-clear.png",
+        iconNight: "./media/weather/clear-night.png",
         bgDayImage: 'url("https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg")',
-        bgNightImage: 'url("https://66.media.tumblr.com/00283aeb496609ca509f0235e2262750/tumblr_pckjavUlQG1upvbufo1_640.gifv")'
+        bgNightImage: 'url("https://upload.wikimedia.org/wikipedia/commons/7/7f/Clear_Night_%28227774827%29.jpeg")'
 
     },
     Clouds: {
@@ -101,6 +106,7 @@ function addBgStyleString(weather) {
 //  console.log("day: " + day)
 
     weatherType = weather.main;
+    // weatherType = "Rain"
 
 //   console.log(weatherTypes[weatherType]);
 
