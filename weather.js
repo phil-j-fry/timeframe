@@ -94,8 +94,8 @@ function addBgStyleString(weather) {
     var dateObj = new Date();
     var hours = dateObj.getHours()
 
-  //  console.log(dt.getHours())
-  console.log(weather.main)
+    //console.log(dt.getHours())
+    // console.log(weather)
 
     let day;
 
@@ -105,12 +105,12 @@ function addBgStyleString(weather) {
         day = true;
     }
     
-//  console.log("day: " + day)
+    // console.log("day: " + day)
 
     weatherType = weather.main;
     // weatherType = "Smoke"
 
-//   console.log(weatherTypes[weatherType]);
+    // console.log(weatherTypes[weatherType]);
 
     document.getElementById("icon");
     
