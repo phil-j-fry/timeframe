@@ -66,7 +66,8 @@ function sendWeatherRequest(url) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var data = JSON.parse(xmlhttp.responseText);
             var weather = {};
-            //console.log(weather);
+           
+           // console.log(data);
 
             weather.main = (data.weather[0].main);
             weather.description = toTitleCase(data.weather[0].description);
@@ -100,22 +101,16 @@ function sendTrelloRequest(url) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var data = JSON.parse(xmlhttp.responseText);
             var board = {};
-            
-            //console.log(data[0].name);
-            updateTrello(data);
-            // weather.main = (data.weather[0].main);
-            // weather.description = toTitleCase(data.weather[0].description);
-            // weather.icon = data.weather[0].icon;
-            // weather.temp = K2F(data.main.temp);
 
-            // update(weather);
-            // console.log(boardCard);
+            updateTrello(data);
+
         }
     };
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+
 
 // Air Quality API
 
@@ -125,7 +120,7 @@ function buildAirQualRequest(){
     // "&distance="+ AREA_DIST + 
     // "&API_KEY="+ AIRQUAL_API;
 
-//    url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=94103&distance=25&API_KEY=676B9282-9148-4E86-B61F-101C3C2C4215";
+    url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=94103&distance=25&API_KEY=676B9282-9148-4E86-B61F-101C3C2C4215";
 
     sendAirQualRequest(url);
 
@@ -135,24 +130,15 @@ function sendAirQualRequest(url) {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var data = JSON.parse(xmlhttp.responseText);
-            var board = {};
-            
-            //console.log(data[0].name);
-           
-            // console.log(data);
+        
             updateAirQual(data);
-            // weather.main = (data.weather[0].main);
-            // weather.description = toTitleCase(data.weather[0].description);
-            // weather.icon = data.weather[0].icon;
-            // weather.temp = K2F(data.main.temp);
 
-            // update(weather);
-            // console.log(boardCard);
         }
     };
 
     xmlhttp.open("GET", url, true);
     xmlhttp.setRequestHeader("Accept", 'application/json');
+    xmlhttp.setRequestHeader('Access-control-allow-origin', '*');
     xmlhttp.send();
 
 }
@@ -181,9 +167,10 @@ function K2F(k){
 
 function displayDateTime(){
     var dt = new Date();
-    var rawMin = dt.getMinutes();
-    var time = dt.getHours() + ":" + rawMin.toPrecision(2);
+    
+    var time = dt.getHours() + ":" + ((dt.getMinutes()<10?'0':'') + dt.getMinutes());
     var currentDay = daysArr[dt.getDay()] + " " + dt.getDate() + " " + monthsArr[dt.getMonth()+1];
+
     document.getElementById("currentDate").innerHTML = currentDay;
     document.getElementById("currentTime").innerHTML = time;
     
