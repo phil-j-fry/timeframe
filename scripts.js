@@ -173,7 +173,27 @@ function displayDateTime(){
 
     document.getElementById("currentDate").innerHTML = currentDay;
     document.getElementById("currentTime").innerHTML = time;
-    
+
+
+    const calViewCount = 5
+
+    let calCurrentView = []
+    let calCurrentHTML = ["calDay1", "calDay2", "calDay3", "calDay4", "calDay5"]
+
+    day = dt.getDay()
+
+    for (i=0; i<calViewCount; i++){
+        if (day === 7){
+            day = 0
+        }
+        calCurrentView[i] = daysArr[day]
+        day +=1
+
+        document.getElementById(calCurrentHTML[i]).innerHTML = calCurrentView[i]
+    }
+
+
+
 }
 
 
