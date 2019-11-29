@@ -6,3 +6,8 @@ function toTitleCase(inputText){
       .join(' '); 
     return text;
 }
+
+function K2F(k){
+  return Math.floor(9/5 * (k-273) + 32);
+
+}

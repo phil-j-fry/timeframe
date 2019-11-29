@@ -1,6 +1,21 @@
 let daysArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 let calDayHTML = ["calDay1", "calDay2", "calDay3", "calDay4", "calDay5"]
 let calNumHTML = ["calNum1", "calNum2", "calNum3", "calNum4", "calNum5"]
+let monthsArr = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+}
+
 let calCurrentView = []
 
 
