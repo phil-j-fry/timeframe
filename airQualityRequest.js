@@ -1,7 +1,7 @@
 // Air Quality API
 
 function buildAirQualRequest(){
-    // var url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&" +
+    // let url = "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&" +
     // "zipCode=" + ZIP +
     // "&distance="+ AREA_DIST + 
     // "&API_KEY="+ AIRQUAL_API;
@@ -12,10 +12,10 @@ function buildAirQualRequest(){
 
 }
 function sendAirQualRequest(url) {
-    var xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var data = JSON.parse(xmlhttp.responseText);
+            let data = JSON.parse(xmlhttp.responseText);
         
             updateAirQual(data);
 

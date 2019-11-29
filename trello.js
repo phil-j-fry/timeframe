@@ -1,5 +1,5 @@
 function updateTrello(data){
-    var board = {};
+    let board = {};
 
     for(i = 0; i< Object.keys(data).length; i++){
         j = i+1;

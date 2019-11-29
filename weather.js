@@ -91,8 +91,8 @@ const weatherTypes = {
 
 
 function addBgStyleString(weather) {
-    var dateObj = new Date();
-    var hours = dateObj.getHours()
+    let dateObj = new Date();
+    let hours = dateObj.getHours()
 
     //console.log(dt.getHours())
     // console.log(weather)
@@ -131,7 +131,7 @@ function weatherForecastTable(weather) {
     document.getElementById("weather-day2").innerHTML = daysArr[calCurrentView[1].getDay()];
     document.getElementById("weather-day3").innerHTML = daysArr[calCurrentView[2].getDay()];
     document.getElementById("weather-day4").innerHTML = daysArr[calCurrentView[3].getDay()];
-    
+
 
 }
 

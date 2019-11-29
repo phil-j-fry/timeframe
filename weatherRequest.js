@@ -1,7 +1,7 @@
 // Weather Request
 
 function buildWeatherRequest(){
-    var url = "http://api.openweathermap.org/data/2.5/weather?" +
+    let url = "http://api.openweathermap.org/data/2.5/weather?" +
     "id=" + geoid +
     "&appid=" + WEATHER_APP_ID;
     sendWeatherRequest(url);
@@ -9,11 +9,11 @@ function buildWeatherRequest(){
 }
 
 function sendWeatherRequest(url) {
-    var xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var data = JSON.parse(xmlhttp.responseText);
-            var weather = {};
+            let data = JSON.parse(xmlhttp.responseText);
+            let weather = {};
            
            // console.log(data);
 

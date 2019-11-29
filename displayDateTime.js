@@ -23,7 +23,7 @@ let calCurrentView = []
 
 function displayDateTime(){
 
-    var dt = new Date();
+    let dt = new Date();
 
     // set calCurrentView array
 
@@ -40,8 +40,8 @@ function displayDateTime(){
 
     // get and set current day and time in DOM
 
-    var time = dt.getHours() + ":" + ((dt.getMinutes()<10?'0':'') + dt.getMinutes());
-    var currentDay = daysArr[dt.getDay()] + " " + dt.getDate() + " " + monthsArr[dt.getMonth()+1];
+    let time = dt.getHours() + ":" + ((dt.getMinutes()<10?'0':'') + dt.getMinutes());
+    let currentDay = daysArr[dt.getDay()] + " " + dt.getDate() + " " + monthsArr[dt.getMonth()+1];
 
     document.getElementById("currentDate").innerHTML = currentDay;
     document.getElementById("currentTime").innerHTML = time;
