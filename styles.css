@@ -81,7 +81,42 @@ h2{
 
 table.weather-table thead tbody tr th {
   width: 175px;
-  text-align: center; 
+  text-align: center;  
+  
+}
+
+#weather-today{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-day2{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-day3{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-day4{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+
+#weather-forecast-today{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-forecast-day2{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-forecast-day3{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
+}
+#weather-forecast-day4{
+  text-shadow: -1px 0 #3D4D4C, 0 1px #3D4D4C, 1px 0 #3D4D4C, 0 -1px #3D4D4C;
+
 }
 
 
