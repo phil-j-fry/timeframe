@@ -30,24 +30,6 @@ let monthsArr = {
 }
 
 
-function update(weather){
-    temp.innerHTML = weather.temp;
-    description.innerHTML = weather.description;
-   //icon.src = "https://openweathermap.org/img/w/" + weather.icon + ".png";
-   //icon.src = './media/weather/22.png';
-
-   addBgStyleString(weather);
-}
-
-function toTitleCase(inputText){
-    var text = inputText;
-        text = text.toLowerCase()
-        .split(' ')
-      .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-      .join(' '); 
-    return text;
-}
-
 // Weather Request
 
 function buildWeatherRequest(){
@@ -78,6 +60,15 @@ function sendWeatherRequest(url) {
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+}
+
+function update(weather){
+    temp.innerHTML = weather.temp;
+    description.innerHTML = weather.description;
+   //icon.src = "https://openweathermap.org/img/w/" + weather.icon + ".png";
+   //icon.src = './media/weather/22.png';
+
+   addBgStyleString(weather);
 }
 
 
