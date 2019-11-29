@@ -13,8 +13,6 @@ AREA_DIST = '25'
 AIRQUAL_API = "676B9282-9148-4E86-B61F-101C3C2C4215"
 
 
-let daysArr = 
-["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 let monthsArr = {
     1: "January",
@@ -153,48 +151,7 @@ function K2F(k){
 
 
 
-// DATETIME
 
-
-// function time() {
-//     var d = new Date();
-//     var s = d.getSeconds();
-//     var m = d.getMinutes();
-//     var h = d.getHours();
-//     span.textContent = h + ":" + m + ":" + s;
-//   }
-
-
-function displayDateTime(){
-    var dt = new Date();
-    
-    var time = dt.getHours() + ":" + ((dt.getMinutes()<10?'0':'') + dt.getMinutes());
-    var currentDay = daysArr[dt.getDay()] + " " + dt.getDate() + " " + monthsArr[dt.getMonth()+1];
-
-    document.getElementById("currentDate").innerHTML = currentDay;
-    document.getElementById("currentTime").innerHTML = time;
-
-
-    const calViewCount = 5
-
-    let calCurrentView = []
-    let calCurrentHTML = ["calDay1", "calDay2", "calDay3", "calDay4", "calDay5"]
-
-    day = dt.getDay()
-
-    for (i=0; i<calViewCount; i++){
-        if (day === 7){
-            day = 0
-        }
-        calCurrentView[i] = daysArr[day]
-        day +=1
-
-        document.getElementById(calCurrentHTML[i]).innerHTML = calCurrentView[i]
-    }
-
-
-
-}
 
 
 
