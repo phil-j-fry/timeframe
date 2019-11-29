@@ -69,6 +69,7 @@ function update(weather){
    //icon.src = './media/weather/22.png';
 
    addBgStyleString(weather);
+   weatherForecastTable(weather);
 }
 
 
