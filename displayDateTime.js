@@ -1,6 +1,8 @@
 let daysArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 let calDayHTML = ["calDay1", "calDay2", "calDay3", "calDay4", "calDay5"]
 let calNumHTML = ["calNum1", "calNum2", "calNum3", "calNum4", "calNum5"]
+let calCurrentView = []
+
 
 
 
@@ -11,7 +13,6 @@ function displayDateTime(){
     // set calCurrentView array
 
     const calDayCount = 5
-    let calCurrentView = []
     let nextDay = new Date(dt)
 
 
