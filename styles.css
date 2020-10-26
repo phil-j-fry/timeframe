@@ -194,64 +194,13 @@ table.trello{
  table.trello td, table.trello th {
   border: 1px solid #000000;
   padding: 3px 2px;
-  /* font-size: 20px; */
   text-align: left;
 
 }
-/*trello tbody td {
-  font-size: 30px;
-  color: #E6E6E6;
-}
-trello tr:nth-child(even) {
-  background: #888888;
-}
-trello thead {
-  background: #3D4D4C;
-  border-bottom: 3px solid #000000;
-}
-trello thead th {
-  font-size: px;
-  font-weight: bold;
-  color: #E6E6E6;
-  text-align: center;
-  border-left: 2px solid #000000;
-}
-trello thead th:first-child {
-  border-left: none; */ */
-
-/*  FOOTER NOT IN USE
-table.darkTable tfoot td {
-  font-size: 12px;
-}
-
-
-$off_white:#fafafa;
-$light_grey:#A39D9E;
-*{
-  box-sizing:border-box;
-}
-
-body{
-  background-color: $off_white;
-}
-
-.container{
-  margin:100px auto;
-  width:809px;
-}
-
-.light{
-  background-color: #fff;
-}
-.dark{
-  /* margin-left: 65px; */
-
 
 .calendar{
-  /* width:275px; */
   box-shadow: 0px 0px 35px -16px rgba(0,0,0,0.75);
   font-family: 'Roboto', sans-serif;
-  /* padding: 10px 15px; */
   color:#363b41;
   display: inline-block;
 }
@@ -261,12 +210,13 @@ body{
 }
 
 .header_copy{
-  color:$light_grey;
+  color:lightgrey;
   font-size:20px;
 }
 .calendar_plan{
   margin:20px 0 40px;
 }
+
 .cl_plan{
   width:100%;
   height: 140px;
@@ -275,9 +225,7 @@ body{
   padding:30px;
   color:#fff;
 }
-.cl_title{
-  
-}
+
 .cl_copy{
   font-size:20px;
   margin: 20px 0;
@@ -286,8 +234,6 @@ body{
 
 .cl_add{
   display: inline-block;
-  /* width: 40px;
-  height:40px; */
   border-radius:50%;
   background-color: #fff;
   cursor: pointer;
@@ -296,7 +242,7 @@ body{
   padding: 11px 13px;
 }
 .calendar_events{
-  color:$light_grey;
+  color:light_grey;
 }
 .ce_title{
   font-size:14px;
@@ -306,16 +252,6 @@ body{
   margin: 18px 0;
   padding:5px;
   cursor: pointer;
-  &:hover{
-    background-image: linear-gradient(-222deg, #FF8494, #ffa9b7);
-    box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
-    .ei_Dot{
-      background-color: #fff;
-    }
-    .ei_Copy,.ei_Title{
-      color:#fff;
-    }
-  }
 }
 
 .ei_Dot,.ei_Title{
@@ -326,7 +262,7 @@ body{
   border-radius:50%;
   width:10px;
   height: 10px;
-  background-color: $light_grey;
+  background-color: light_grey;
   box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
 }
 .dot_active{
@@ -335,23 +271,11 @@ body{
 
 .ei_Title{
   font-size:16px;
-  /* margin-left:10px; */
   color:#FFFFFF;
 }
 
 .ei_Copy{
   font-size:12px;
-  /* margin-left:27px; */
 }
 
-.dark{
-  /* background-image: linear-gradient(-222deg, #646464, #454545); */
-  background-color: rgba(136, 136, 136, 0.4);
-
-  color:#fff;
-  .header_title,.ei_Title,.ce_title{
-    color:#fff;
-  }
-  
-}
 
