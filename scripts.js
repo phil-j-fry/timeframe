@@ -22,8 +22,11 @@ window.onload = function() {
     // description = document.getElementById("description");
 
     
-    buildWeatherRequest();
-    const weatherReq = setInterval(buildWeatherRequest, 300000);
+    buildCurrentWeatherRequest();
+    const weatherReq = setInterval(buildCurrentWeatherRequest, 300000);
+
+    buildWeatherForecastRequest();
+    const weatherForecastReq = setInterval(buildWeatherForecastRequest, 300000);
 
     buildTrelloRequest();
     const trelloReq = setInterval(buildTrelloRequest, 300000);
