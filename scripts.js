@@ -38,8 +38,5 @@ window.onload = function() {
     // buildAirQualRequest();
     // const AirQualReq = setInterval(buildAirQualRequest, 300000);
 
-
-
-
 }
 
